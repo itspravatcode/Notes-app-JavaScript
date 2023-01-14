@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background:#FF7B54;
+}
+
+.line{
+    position: relative;
+    top: 50%;
+    width: 10em;
+    margin: 0 auto;
+    color: rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.5) ;
+    font-size: 180%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(100%);
+}
+
+.anim-typewriter{
+    animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter { 
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color:rgba(0, 0, 0, 0.5) ;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+#app {
+    border-radius: 50px;
+    background-color:#FFB26B ;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250px);
+    padding: 100px;
+    gap: 24px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.note{
+    height: 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.add-note{
+    height: 200px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.add-note:hover{
+    background:rgba(0, 0, 0, 0.2) ;
+}
